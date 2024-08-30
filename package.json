@@ -1,18 +1,22 @@
 {
   "name": "478c",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host --port 47807",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.37"
-  },
-  "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
-    "vite": "^5.4.1"
+    "axios": "^1.7.5",
+    "cssnano": "^7.0.5",
+    "dotenv": "^16.4.5",
+    "naive-ui": "^2.39.0",
+    "postcss": "^8.4.41",
+    "postcss-preset-env": "^10.0.2",
+    "vite": "^5.4.1",
+    "vue": "^3.4.37"
   }
 }

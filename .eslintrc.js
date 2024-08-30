@@ -1,5 +1,10 @@
 module.exports = {
-  extends: ['alloy', 'alloy/react', 'alloy/typescript', 'plugin:prettier/recommended'],
+  extends: [
+    "alloy",
+    "alloy/react",
+    "alloy/typescript",
+    "plugin:prettier/recommended",
+  ],
   env: {
     // 你的环境变量（包含多个预定义的全局变量）
     //
@@ -15,15 +20,16 @@ module.exports = {
     // myGlobal: false
   },
   rules: {
+    "vue/no-deprecated-slot-attribute": "off",
     // 自定义你的规则
     // 最大圈复杂度
-    complexity: ['error', 30],
-    'linebreak-style': ['error', 'unix'],
+    complexity: ["error", 30],
+    "linebreak-style": ["error", "unix"],
     semi: 2,
     // indent: ['error', 2],
-    'semi-style': ['error', 'last'],
-    'react/jsx-no-useless-fragment': [
-      'error',
+    "semi-style": ["error", "last"],
+    "react/jsx-no-useless-fragment": [
+      "error",
       {
         allowExpressions: true,
       },
