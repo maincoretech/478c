@@ -1,23 +1,20 @@
 import axios from "axios";
-import "dotenv/config";
+// import "dotenv/config";
 
-const config = process.env;
+// const config = process.env;
 
 const instance = axios.create({
-  baseURL: config.SERVER + "/server",
+  baseURL: "http://localhost:47806/server",
   timeout: 10000,
 });
 
 async function information() {
-  instance.get("/information").then((response) => {
-    if (response.data.status) {
-      console.log("Server is up");
-      return response.data;
-    } else {
-      console.log("Server is down");
-      return false;
-    }
-  });
+  const response = await instance.get("/information");
+  if (response.data.status) {
+    return response.data;
+  } else {
+    return false;
+  }
 }
 
 export default information;
